@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # MemHawk - Advanced Memory Analysis Platform
 
 A professional, AI-powered memory forensics platform that provides comprehensive analysis of memory dumps through an intuitive, modern interface.
@@ -81,3 +82,7 @@ npm run electron-pack
 ## License
 
 MIT License
+=======
+# MemHawk
+Forensics Memory Dump Analyzer
+>>>>>>> 946b64d021616be6451a674732ddd89b6ca0ec20
