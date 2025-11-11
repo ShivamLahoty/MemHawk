@@ -1,0 +1,68 @@
+{
+  "name": "memhawk",
+  "version": "1.0.0",
+  "description": "Modern Memory Forensics Tool - A clean and modern Electron GUI for Volatility 3",
+  "main": "public/electron.js",
+  "private": true,
+  "homepage": "./",
+  "scripts": {
+    "electron": "electron .",
+    "electron-dev": "set ELECTRON_IS_DEV=true && electron .",
+    "electron-pack": "electron-builder",
+    "preelectron-pack": "npm run build",
+    "build": "npm run build-react",
+    "build-react": "cd frontend && npm run build",
+    "start": "concurrently \"npm run start-react\" \"wait-on http://localhost:5173 && npm run electron-dev\"",
+    "start-react": "cd frontend && npm run dev",
+    "postinstall": "cd frontend && npm install",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "memory-forensics",
+    "volatility",
+    "digital-forensics",
+    "electron",
+    "react"
+  ],
+  "authors": [
+    "Adriteyo Das",
+    "Anvita Warjri",
+    "Shivam Lahoty"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^38.2.1",
+    "electron-builder": "^24.9.1",
+    "wait-on": "^7.2.0"
+  },
+  "build": {
+    "appId": "com.memhawk.app",
+    "productName": "MemHawk",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "public/**/*",
+      "frontend/dist/**/*",
+      "src/**/*",
+      "plugin/**/*",
+      "node_modules/**/*"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "dotenv": "^17.2.3",
+    "marked": "^16.4.0",
+    "pdf-lib": "^1.17.1"
+  }
+}

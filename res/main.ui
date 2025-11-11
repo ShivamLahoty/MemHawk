@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1256</width>
+    <height>511</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Volatility GUI by Pental</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_exit">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>460</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Exit</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_status">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>470</y>
+      <width>541</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="btn_image_open">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>40</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Open</string>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="txt_image_path">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>40</y>
+      <width>651</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>821</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="txt_result">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>821</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_image">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>41</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>IMAGE</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_scan">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>470</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Scan</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_case_name">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>11</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>CASE NAME</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lbl_date">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>10</y>
+      <width>61</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="text">
+     <string>DATE</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_case_name">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>10</y>
+      <width>441</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>test-case</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_date">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>10</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tab_plugin">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>10</y>
+      <width>297</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="tab_windows">
+     <attribute name="title">
+      <string>Windows</string>
+     </attribute>
+     <widget class="QListWidget" name="list_plugins">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>271</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btn_plugin_check">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Check All</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btn_plugin_uncheck">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>430</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Uncheck All</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_linux">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <attribute name="title">
+      <string>Linux</string>
+     </attribute>
+     <widget class="QListWidget" name="list_plugins_linux">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>271</width>
+        <height>411</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btn_plugin_uncheck_linux">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>430</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Uncheck All</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="btn_plugin_check_linux">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>430</y>
+        <width>131</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Consolas</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Check All</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_auto_analyze">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>35</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Auto Analyze</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_examine">
+    <property name="geometry">
+     <rect>
+      <x>1140</x>
+      <y>80</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Examine</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_save">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>470</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Save Log</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

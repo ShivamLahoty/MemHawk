@@ -1,0 +1,47 @@
+/* MemHawk Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: #020617;
+  color: #f1f5f9;
+  overflow: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
+
+/* Selection */
+::selection {
+  background-color: #1e40af;
+  color: #f1f5f9;
+}
+
+/* Focus styles */
+button:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
